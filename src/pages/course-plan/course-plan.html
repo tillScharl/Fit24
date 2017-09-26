@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-item no-lines>
+      <ion-avatar item-end>
+        <img src="assets/img/logo150.png" alt="fit24Logo">
+      </ion-avatar>
+      <ion-title>
+        Kursplan
+      </ion-title>
+    </ion-item>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <table>
+    <tr>
+      <th>Uhrzeit</th>
+      <th>Mo</th>
+      <th>Di</th>
+      <th>Mi</th>
+      <th>Do</th>
+      <th>Fr</th>
+      <th>Sa</th>
+      <th>So</th>
+    </tr>
+    <tr *ngFor="let item of csvItems">
+      <td>{{item.Time}}</td>
+      <td><button ion-item (click)="showBookingPage(item.Time, 'Mo', item.Mo)">{{item.Mo}}</button></td>
+      <td><button ion-item (click)="showBookingPage(item.Time, 'Di', item.Di)">{{item.Di}}</button></td>
+      <td><button ion-item (click)="showBookingPage(item.Time, 'Mi', item.Mi)">{{item.Mi}}</button></td>
+      <td><button ion-item (click)="showBookingPage(item.Time, 'Do', item.Do)">{{item.Do}}</button></td>
+      <td><button ion-item (click)="showBookingPage(item.Time, 'Fr', item.Fr)">{{item.Fr}}</button></td>
+      <td><button ion-item (click)="showBookingPage(item.Time, 'Sa', item.Sa)">{{item.Sa}}</button></td>
+      <td><button ion-item (click)="showBookingPage(item.Time, 'So', item.So)">{{item.So}}</button></td>
+    </tr>
+  </table>
+</ion-content>

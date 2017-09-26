@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <ion-item no-lines>
+      <ion-avatar item-end>
+        <img src="assets/img/logo150.png" alt="fit24Logo">
+      </ion-avatar>
+      <ion-title>
+        Studioauswahl
+      </ion-title>
+    </ion-item>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item text-wrap>
+    <h2 class="fit24Headline">HERZLICH WILLKOMMEN BEI FIT 24!</h2>
+    <br/>
+    <p>
+      Fitness und Gesundheitstraining ist nicht nur eine Tätigkeit, sondern eine Lebenseinstellung. Fit 24 und seine Mitarbeiter
+      sind der festen Überzeugung, dass Bewegung zu den Grundbedürfnissen des Menschen gehören und dass richtiges, auf die
+      Person zugeschnittes Training nicht nur die Kondition verbessert, sondern viel mehr bewirkt. Ein schmerzfreier Rücken
+      oder eine Figur, mit der man sich wohl fühlt, tragen direkt zu mehr Lebensqualität bei. Fit 24 legt besonders viel
+      Wert auf Qualität und Freundlichkeit. Jeder wird hier mit einem Lächeln begrüßt und findet in unserer großen Auswahl
+      an Trainingsmöglichkeiten sicher das passende Training.
+    </p>
+  <!--  <p>
+      In Kursen wie Spinning oder Zumba kann man in der Gruppe mit viel Spaß und Anleitung sein Ziel verfolgen. Wer effektiv abnehmen
+      möchte, für den ist unser Gesundheitszirkel, genau das Richtige. Vollautomatische Geräte, die sich individuell und
+      von ganz alleine auf den Trainierenden einstellen.
+    </p>
+    <p>
+      Dies und noch viel mehr kann man 24 Stunden am Tag und sieben Tage die Woche nutzen. Es gibt keine Öffnungszeiten und keine
+      Feiertage.
+    </p>
+    <p>
+      Die Teams von Fit 24 freuen sich auf deinen Besuch. Vereinbare einfach einen Termin für ein unverbindliches Probetraining
+      und pack es an.
+    </p>-->
+    <p>
+      Dein Fit 24 Team
+    </p>
+    <br/>
+    <h2 class="fit24Headline">Wähle dein Studio</h2>
+  </ion-item>
+  <ion-item>
+    <ion-select #myselect okText="OK" cancelText="Abbrechen" [(ngModel)]="studio" interface=action-sheet (ionChange)="showCoursePlan()">
+      <ion-option value="amberg">Amberg</ion-option>
+      <ion-option value="ambergLight">Amberg Light</ion-option>
+      <ion-option value="nabburg">Nabburg</ion-option>
+      <ion-option value="schwandorf">Schwandorf</ion-option>
+      <ion-option value="sulzbach">Sulzbach-Rosenberg</ion-option>
+      <ion-option value="weiden">Weiden i. D. OPF</ion-option>
+    </ion-select>
+  </ion-item>
+  <button ion-button class="studioPictureBtn" color="light" (click)="openStudioSelcet()">
+    <img [hidden]="studio != 'amberg' && studio != null" src="assets/img/karte_amberg.png" alt="karteAmberg">
+    <img [hidden]="studio != 'ambergLight'" src="assets/img/karte_amberg.png" alt="karteAmbergLight">
+    <img [hidden]="studio != 'nabburg'" src="assets/img/karte_nabburg.png" alt="karteNabburg">
+    <img [hidden]="studio != 'schwandorf'" src="assets/img/karte_schwandorf.png" alt="karteSchwandorf">
+    <img [hidden]="studio != 'sulzbach'" src="assets/img/karte_sulzbachrosenberg.png" alt="karteSulzbach">
+    <img [hidden]="studio != 'weiden'" src="assets/img/karte_weiden.png" alt="karteWeiden">
+  </button>
+</ion-content>

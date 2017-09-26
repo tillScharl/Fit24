@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-item no-lines>
+      <ion-avatar item-end>
+        <img src="assets/img/logo150.png" alt="fit24Logo">
+      </ion-avatar>
+      <ion-title>
+        Kurs buchen
+      </ion-title>
+    </ion-item>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-title>Kurs: {{courseName}}</ion-title>
+  <ion-item class="course-font-size">
+    <p>
+      <ion-icon color="primary" name="calendar"></ion-icon>
+      {{day}}.</p>
+    <p>
+      <ion-icon color="primary" name="time"></ion-icon>
+      {{time}} Uhr</p>
+    <button ion-button icon-start>
+    <ion-icon name="exit"></ion-icon> 
+        Jetzt buchen
+  </button>
+  </ion-item>
+</ion-content>
